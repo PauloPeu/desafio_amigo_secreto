@@ -3,12 +3,11 @@
 let amigos = [];
 function adicionarAmigo() {
     if (document.querySelector('input').value == "") {
-        alert('nome invalido digite novamente');
+        alert('Você Precisa dogitar um nome!!');
         
     }else{
         let nomes = document.querySelector('input').value;
         amigos.push(nomes);
-        //console.log(amigos);
     }
     limparCampo();
     exibirNomes();
@@ -35,7 +34,6 @@ function exibirNomes() {
             li.textContent = item;
             lista.appendChild(li);
         });
-        //console.log(itens);
     }
 }
 function sortearAmigo() {
@@ -46,7 +44,6 @@ function sortearAmigo() {
                 let resultado = document.getElementById("resultado");
                 resultado.innerHTML = (`VOCÊ NÃO DIGITOU NENHUM NOME!!`);
             }else{
-                //let numeroSorteado = parseInt(Math.random() * tamanhoLista);
                 let numeroSorteado = (Math.floor(Math.random() * (tamanhoLista - 0)));
                 resultado.innerHTML = (`Nome Sorteado: ${amigos[numeroSorteado]}`);
                 console.log(amigos[numeroSorteado], (numeroSorteado));
