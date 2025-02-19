@@ -3,7 +3,7 @@
 let amigos = [];
 function adicionarAmigo() {
     if (document.querySelector('input').value == "") {
-        alert('Você Precisa dogitar um nome!!');
+        alert('Você Precisa digitar um nome!!');
         
     }else{
         let nomes = document.querySelector('input').value;
